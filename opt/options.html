@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<title></title>
+<meta name="" content="">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/font-awesome.min.css" rel="stylesheet">
+<link href="/opt/options.css" rel="stylesheet">
+<link href="/opt/normalize.css" rel="stylesheet">
+<link href="/css/typeahead.css" rel="stylesheet">
+<script type="text/javascript" src="../js/jQuery.min.js"></script>
+
+
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/typeahead.min.js"></script>
+    <script type="text/javascript" src="../js/handlebars.js"></script>
+
+<script type="text/javascript" src="options.js"></script>
+
+<script id="someTmp" type="text/x-handlebars-template">
+
+  <h2 class="head">Keep Visiting <span class="icon-question-sign" data-toggle="tooltip" data-original-title="Click on 'Magic-Bag' or right click and add to this list of domains you like"></span></h2>
+    <ul id="someThings">
+  {{#each items}}
+  	{{#with item}}
+    <li>
+      <a class="fleft" href="{{home}}">{{home}}</a>
+	  <span class="icon-remove icon-large remove fright"></span>
+      <span class="icon-edit icon-large edit fright"></span>
+    </li>
+	{{/with}}
+  {{/each}}
+  </ul>
+</script>
+
+<script id="editTmp" type="text/x-handlebars-template">
+    <form class="editForm fleft">
+        <input type="text" name="url"  value="{{url}}"/>
+        <!--<button type="submit" class="icon-save icon-large"/>-->
+        <button type="submit" class="editButton fright">
+            <i class="icon-save icon-large"></i>
+        </button>
+    </form>
+
+
+</script>
+
+<script id="exactTmp" type="text/x-handlebars-template">
+   <h2 class="head">Read Them <span class="icon-question-sign" data-toggle="tooltip" data-original-title="Right click on a page and add it, to this read later list"></span></h2>
+
+  <ul id="exactThings">
+  {{#each items}}
+  	{{#with item}}
+    <li>
+      <a class="fleft" href="{{url}}">{{url}}</a>
+        <span class="icon-remove icon-large remove fright"></span>
+	  <!--<span class="time-spent fright">{{timeSpent}}</span>-->
+    </li>
+	{{/with}}
+  {{/each}}
+  </ul>
+  <!--<input type="checkbox" id="delExact" value="1"/> <label for="delExact"> Auto remove after </label> <input id="exactText" value="" size="1" style="width:20" type="text"><label for="delExact"> minutes on page</label>-->
+
+</script>
+
+<script id="wordTmp" type="text/x-handlebars-template">
+
+    <h2 class="head">Look Up <span class="icon-question-sign" data-toggle="tooltip" data-original-title="Hightlight a keyword and right click to add to this list"></span></h2>
+
+  <ul id="wordThings">
+  {{#each items}}
+  	{{#with item}}
+    <li>
+    	<a class="fleft" href="{{url}}">{{word}}</a>
+        <span class="icon-remove icon-large remove fright"></span>
+		<!--<span class="shown-count fright">{{shownCount}}</span>-->
+	</li>
+	{{/with}}
+  {{/each}}
+  </ul>
+    <!--<span> Search Engine Used</span>-->
+    <!--<select id="searchEng" class="selectpicker" class="fright">-->
+        <!--<option>Google</option>-->
+        <!--<option>DuckDuckGo</option>-->
+        <!--<option>Bing</option>-->
+    <!--</select>-->
+
+    <!--</br>-->
+    <!--<input id="delWord" type="checkbox" name="delExact" value="1"/> <label for="delWord">Auto remove on searching </label> <input id="wordText" value="" size="1" style="width:20" type="text"> <label for="delWord"> times</label>-->
+
+</script>
+
+</head>
+<body>
+
+
+
+ <div class="container">
+
+     <div class="addBar">
+         <input id="miniAdd" type="text" size="700"/>
+
+        </br>
+         </br>
+
+     </div>
+      <div class="body-content">
+		<div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="checked">
+			<div class="row">
+		        <div class="col-lg-4">
+				</div>
+				<div class="col-lg-4">
+				</div>
+				<div class="col-lg-4">
+				</div>
+			</div>
+		</div>
+        </div>
+      </div>
+        <!-- Example row of columns -->
+      </div><!-- /.body-content -->
+
+     
+    </div> <!-- /container -->
+
+
+
+</body>
+</html>
